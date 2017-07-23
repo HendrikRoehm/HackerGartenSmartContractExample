@@ -8,10 +8,9 @@ contract Bet {
         betmaster = tx.origin;
     }
 
-    function makeBet(uint choice) returns(bool) {
+    function makeBet(uint choice) {
         // 0 is no choice, positive numbers represent choices
         choices[msg.sender] = choice;
-        return true;
     }
 
     function closeBetting() returns(bool) {
